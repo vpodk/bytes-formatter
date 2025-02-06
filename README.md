@@ -20,5 +20,11 @@ import { formatBytes } from "bytes-formatter";
  * @param {number} bytes The bytes to be formatted.
  * @return {string} The formatted bytes as string.
  */
-console.log(formatBytes(1024)); // 1.0 KB
+console.log(formatBytes(1000)); // "1000 bytes"
+console.log(formatBytes(1024)); // "1.00 KB"
+console.log(formatBytes(1000000)); // "976.56 KB"
+console.log(formatBytes(2000000)); // "1.91 MB"
+console.log(formatBytes(2000000000)); // "1.86 GB"
+console.log(formatBytes(2000000000000)); // "1.82 TB"
+console.log(formatBytes(Number.MAX_SAFE_INTEGER)); // "8.00 PB"
 ```
