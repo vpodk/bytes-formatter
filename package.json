@@ -1,10 +1,10 @@
 {
   "name": "bytes-formatter",
   "type": "module",
-  "version": "21.6.12",
-  "description": "Bytes formatter module from Glize library.",
-  "homepage": "https://glize.js.org",
-  "repository": "github:Datamart/bytes-formatter",
+  "version": "21.6.13",
+  "description": "Bytes formatter module",
+  "homepage": "https://github.com/vpodk/bytes-formatter",
+  "repository": "github:vpodk/bytes-formatter",
   "license": "Apache-2.0",
   "main": "./index.js",
   "exports": "./index.js",
@@ -13,11 +13,11 @@
     "test": "node ./index.tests.js"
   },
   "bugs": {
-    "url": "https://github.com/Datamart/bytes-formatter/issues"
+    "url": "https://github.com/vpodk/bytes-formatter/issues"
   },
   "author": {
     "name": "Valentin Podkamennyi",
-    "email": "valentin@dtm.io",
+    "email": "vpodk@users.noreply.github.com",
     "url": "https://vpodk.com/"
   },
   "keywords": [
@@ -25,7 +25,6 @@
     "byte-formatter",
     "format-bytes",
     "formatBytes",
-    "glize",
     "filesize",
     "pretty-bytes"
   ]

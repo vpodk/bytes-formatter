@@ -1,19 +1,17 @@
 /**
- * @fileoverview Bytes formatter module from Glize library.
+ * @fileoverview Bytes formatter module
  *
  * @see https://google.github.io/styleguide/javascriptguide.xml
  * @see https://developers.google.com/closure/compiler/docs/js-for-compiler
- * @see https://github.com/Datamart/Glize
  * @module bytes-formatter
  */
-
 
 /**
  * @type {!Array<string>}
  * @inner
  */
-const FORMATS = ['bytes', 'KB', 'MB', 'GB', 'TB', 'PB'];
-  
+const FORMATS = ["bytes", "KB", "MB", "GB", "TB", "PB"];
+
 /**
  * Formats given <code>bytes</code> to human friendly format.
  * @param {number} bytes The bytes to be formatted.
@@ -32,7 +30,5 @@ export const formatBytes = (bytes) => {
     ++i;
   }
 
-  return (i ? bytes.toFixed(2) : bytes) + ' ' + FORMATS[i];
+  return (i ? bytes.toFixed(2) : bytes) + " " + FORMATS[i];
 };
-  
-  
