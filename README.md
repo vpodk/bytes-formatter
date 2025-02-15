@@ -2,7 +2,7 @@
 
 [![Build Status](https://github.com/vpodk/bytes-formatter/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/vpodk/bytes-formatter/actions/workflows/npm-publish.yml) [![License](https://img.shields.io/:license-apache-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0.html) [![NPM version](https://img.shields.io/npm/v/bytes-formatter.svg?style=flat)](https://npmjs.org/package/bytes-formatter) [![NPM downloads](https://img.shields.io/npm/dm/bytes-formatter.svg?style=flat)](https://npmjs.org/package/bytes-formatter)
 
-Bytes formatter module.
+Bytes formatter module provides a function to format byte values into human-readable strings with appropriate units (bytes, KB, MB, GB, TB, PB).
 
 ## Usage
 
