@@ -20,9 +20,15 @@ const FORMATS = ["bytes", "KB", "MB", "GB", "TB", "PB"];
  * @example
  * import {formatBytes} from 'bytes-formatter';
  * formatBytes(1024);
- * //> 1.0 Kb
+ * //> 1.00 KB
  */
 export const formatBytes = (bytes) => {
+  // Handle non-number and non-finite values
+  if (typeof bytes !== 'number' || !Number.isFinite(bytes)) return 'NaN';
+
+  // Handle negative values
+  if (bytes < 0) return "-" + formatBytes(-bytes);
+
   let i = 0;
 
   while (1023 < bytes) {
