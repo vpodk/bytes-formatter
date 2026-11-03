@@ -20,7 +20,7 @@ const FORMATS = ["bytes", "KB", "MB", "GB", "TB", "PB"];
  * @example
  * import {formatBytes} from 'bytes-formatter';
  * formatBytes(1024);
- * //> 1.00 KB
+ * //> 1.0 KB
  */
 export const formatBytes = (bytes) => {
   // Handle non-number and non-finite values
@@ -36,5 +36,8 @@ export const formatBytes = (bytes) => {
     ++i;
   }
 
-  return (i ? bytes.toFixed(2) : bytes) + " " + FORMATS[i];
+  // Use 1 decimal for values >= 1, 2 decimals for values < 1.
+  const decimals = i > 0 ? (bytes >= 1 ? 1 : 2) : 0;
+
+  return (decimals ? bytes.toFixed(decimals) : bytes) + " " + FORMATS[i];
 };

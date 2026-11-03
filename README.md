@@ -21,10 +21,10 @@ import { formatBytes } from "bytes-formatter";
  * @return {string} The formatted bytes as string.
  */
 console.log(formatBytes(1000)); // "1000 bytes"
-console.log(formatBytes(1024)); // "1.00 KB"
-console.log(formatBytes(1000000)); // "976.56 KB"
-console.log(formatBytes(2000000)); // "1.91 MB"
-console.log(formatBytes(2000000000)); // "1.86 GB"
-console.log(formatBytes(2000000000000)); // "1.82 TB"
-console.log(formatBytes(Number.MAX_SAFE_INTEGER)); // "8.00 PB"
+console.log(formatBytes(1024)); // "1.0 KB"
+console.log(formatBytes(1000000)); // "976.6 KB"
+console.log(formatBytes(2000000)); // "1.9 MB"
+console.log(formatBytes(2000000000)); // "1.9 GB"
+console.log(formatBytes(2000000000000)); // "1.8 TB"
+console.log(formatBytes(Number.MAX_SAFE_INTEGER)); // "8.0 PB"
 ```
