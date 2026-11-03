@@ -36,8 +36,8 @@ export const formatBytes = (bytes) => {
     ++i;
   }
 
-  // Use 1 decimal for values >= 1, 2 decimals for values < 1.
-  const decimals = i > 0 ? (bytes >= 1 ? 1 : 2) : 0;
+  // Use 1 decimal for all units except bytes.
+  const decimals = i > 0 ? 1 : 0;
 
   return (decimals ? bytes.toFixed(decimals) : bytes) + " " + FORMATS[i];
 };
