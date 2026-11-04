@@ -9,7 +9,12 @@ const runTests = () => {
   assert.strictEqual(formatBytes(2e9), '1.9 GB');
   assert.strictEqual(formatBytes(2e12), '1.8 TB');
   assert.strictEqual(formatBytes(Number.MAX_SAFE_INTEGER), '8.0 PB');
+  assert.strictEqual(formatBytes(1023), '1023 bytes');
+  assert.strictEqual(formatBytes(1024 ** 5), '1.0 PB');
+  assert.match(formatBytes(Number.MAX_VALUE), / PB$/);
   assert.strictEqual(formatBytes(-1024), '-1.0 KB');
+  assert.strictEqual(formatBytes(-0), '-0 bytes');
+  assert.strictEqual(formatBytes(1023.5), '1023.5 bytes');
   assert.strictEqual(formatBytes(Infinity), 'NaN');
   assert.strictEqual(formatBytes(NaN), 'NaN');
   assert.strictEqual(formatBytes('1000'), 'NaN');
