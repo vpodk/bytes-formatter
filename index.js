@@ -29,9 +29,16 @@ export const formatBytes = (bytes) => {
   // Handle negative values
   if (bytes < 0) return "-" + formatBytes(-bytes);
 
+  // Preserve negative zero.
+  if (Object.is(bytes, -0)) return "-0 bytes";
+
   let i = 0;
 
-  while (1023 < bytes) {
+  // Use a 1024 threshold to keep fractional-byte values bytes.
+  while (1024 <= bytes) {
+    // Stop at largest supported unit.
+    if (i === FORMATS.length - 1) break;
+
     bytes /= 1024;
     ++i;
   }
